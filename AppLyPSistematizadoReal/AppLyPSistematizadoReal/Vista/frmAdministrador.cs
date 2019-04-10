@@ -24,5 +24,12 @@ namespace AppLyPSistematizadoReal.Vista
         {
             objMensualidad.Show();
         }
+
+        private void pcLavado_Click(object sender, EventArgs e)
+        {
+            FrmLavadero lavadero = new FrmLavadero();
+            lavadero.Show();
+            this.Hide();
+        }
     }
 }

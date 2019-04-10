@@ -58,6 +58,7 @@
             this.pcLavado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcLavado.TabIndex = 2;
             this.pcLavado.TabStop = false;
+            this.pcLavado.Click += new System.EventHandler(this.pcLavado_Click);
             // 
             // pcParqueo
             // 

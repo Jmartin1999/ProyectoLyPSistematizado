@@ -109,6 +109,7 @@
             this.pcLavado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcLavado.TabIndex = 7;
             this.pcLavado.TabStop = false;
+            this.pcLavado.Click += new System.EventHandler(this.pcLavado_Click);
             // 
             // pictureBox2
             // 
