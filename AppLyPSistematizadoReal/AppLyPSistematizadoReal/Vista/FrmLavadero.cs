@@ -77,7 +77,7 @@ namespace AppLyPSistematizadoReal.Vista
             int CONTT = servicio.mtdregistrar();
             if (CONTT > 0)
             {
-                MessageBox.Show("" + txtServicio + "  +   " + "Valor a Pagar ");
+                MessageBox.Show("servicio Registrado");
                 VclLavadero Objservicio = new VclLavadero();
                 dgvDatos.DataSource = Objservicio.mtdListar();
             }
@@ -132,18 +132,7 @@ namespace AppLyPSistematizadoReal.Vista
             int variable = objCliente.mtdasignarvehi();
             lblAutomovil.Text = variable.ToString();
 
-            // id de tarifa
-            //VclLavadero Tarifa = new VclLavadero();
-            //DataTable dtTarifa = new DataTable();
-            //dtTarifa = Tarifa.mtdTarifa();
-            //for (int i = 0; i < dtTarifa.Rows.Count; i++)
-            //{
-            //    if (lblServicio.Text == Convert.ToString(dtTarifa.Rows[i]["TipoS"]))
-            //    {
-            //        label6.Text = Convert.ToString(dtTarifa.Rows[i]["Valor"]);
-
-            //    }
-            //}
+            
 
             // valor del servicio
             if (lblServicio.Text == "LAVADO1")
@@ -171,6 +160,22 @@ namespace AppLyPSistematizadoReal.Vista
             else if (lblServicio.Text == "LAVADO3")
             {
                 lblidServicio.Text = "7";
+            }
+        }
+
+        private void cmbTipoVehiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoVehiculo.Text == "CARRO")
+            {
+                lblServicio.Text = "LAVADO1";
+            }
+            else if (lblServicio.Text == "MOTO")
+            {
+                lblServicio.Text = "LAVADO2";
+            }
+            else if (lblServicio.Text == "BICICLETA")
+            {
+                lblServicio.Text = "LAVADO3";
             }
         }
     }

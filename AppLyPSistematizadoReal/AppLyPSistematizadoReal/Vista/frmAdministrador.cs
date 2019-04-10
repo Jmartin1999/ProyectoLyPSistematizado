@@ -31,5 +31,19 @@ namespace AppLyPSistematizadoReal.Vista
             lavadero.Show();
             this.Hide();
         }
+
+        private void cerrar_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void pcParqueo_Click(object sender, EventArgs e)
+        {
+            frmParqueo login = new frmParqueo();
+            login.Show();
+            this.Hide();
+        }
     }
 }

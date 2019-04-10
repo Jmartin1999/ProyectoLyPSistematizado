@@ -69,6 +69,7 @@
             this.pcParqueo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcParqueo.TabIndex = 3;
             this.pcParqueo.TabStop = false;
+            this.pcParqueo.Click += new System.EventHandler(this.pcParqueo_Click);
             // 
             // pcMensualidad
             // 

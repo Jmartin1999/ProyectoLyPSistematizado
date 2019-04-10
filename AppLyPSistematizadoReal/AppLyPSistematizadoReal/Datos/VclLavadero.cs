@@ -23,7 +23,7 @@ namespace AppLyPSistematizadoReal.Datos
         {
             List<VclLavadero> listalavado = new List<VclLavadero>();
             DataTable dtLavado = new DataTable();
-            string consulta = "select Placa,TipoV,TipoS,Valor from Automovil inner join Servicio on (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on  (Servicio.IdTarifa = Tarifa.IdTipo) WHERE TipoS= 'LAVADO1' OR TipoS= 'LAVADO2' OR TipoS='LAVADO3' ";
+            string consulta = "select Placa,TipoV,TipoS,Valor from Automovil inner join Servicio on (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on  (Servicio.IdTarifa = Tarifa.IdTarifa) WHERE TipoS= 'LAVADO1' OR TipoS= 'LAVADO2' OR TipoS='LAVADO3' ";
             dtLavado = objConeexion.mtdDesconectado(consulta);
 
             for (int i = 0; i < dtLavado.Rows.Count; i++)

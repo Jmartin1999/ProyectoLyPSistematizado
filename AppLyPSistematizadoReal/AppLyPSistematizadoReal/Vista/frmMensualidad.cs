@@ -226,7 +226,7 @@ namespace AppLyPSistematizadoReal.Vista
                 int cantidad = objPagos.mtdRegistrarPago(variable, Variable2);
                 MessageBox.Show("Datos Registrados" + cantidad);
                 frmMensualidad_Load(null, null);
-                gpFactura.Visible = true;
+                
 
 
             }

@@ -53,17 +53,21 @@
             // lblidServicio
             // 
             this.lblidServicio.AutoSize = true;
+            this.lblidServicio.BackColor = System.Drawing.Color.Transparent;
             this.lblidServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblidServicio.ForeColor = System.Drawing.Color.Black;
             this.lblidServicio.Location = new System.Drawing.Point(917, 60);
             this.lblidServicio.Name = "lblidServicio";
             this.lblidServicio.Size = new System.Drawing.Size(33, 29);
             this.lblidServicio.TabIndex = 20;
             this.lblidServicio.Text = "Id";
+            this.lblidServicio.Visible = false;
             // 
             // lblServicio
             // 
             this.lblServicio.AutoSize = true;
             this.lblServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lblServicio.ForeColor = System.Drawing.Color.Transparent;
             this.lblServicio.Location = new System.Drawing.Point(705, 57);
             this.lblServicio.Name = "lblServicio";
             this.lblServicio.Size = new System.Drawing.Size(100, 29);
@@ -132,6 +136,7 @@
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
             this.cmbTipoVehiculo.Size = new System.Drawing.Size(219, 31);
             this.cmbTipoVehiculo.TabIndex = 17;
+            this.cmbTipoVehiculo.SelectedIndexChanged += new System.EventHandler(this.cmbTipoVehiculo_SelectedIndexChanged);
             // 
             // EMPLEADO
             // 
@@ -155,7 +160,9 @@
             // lblAutomovil
             // 
             this.lblAutomovil.AutoSize = true;
+            this.lblAutomovil.BackColor = System.Drawing.Color.Transparent;
             this.lblAutomovil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblAutomovil.ForeColor = System.Drawing.Color.Black;
             this.lblAutomovil.Location = new System.Drawing.Point(18, 17);
             this.lblAutomovil.Name = "lblAutomovil";
             this.lblAutomovil.Size = new System.Drawing.Size(35, 26);
@@ -209,6 +216,7 @@
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.Location = new System.Drawing.Point(28, 74);
+            this.txtPlaca.MaxLength = 6;
             this.txtPlaca.Multiline = true;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(289, 67);
@@ -245,7 +253,6 @@
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.Name = "FrmLavadero";
-            this.Opacity = 0.87D;
             this.Text = "Lavado";
             this.Load += new System.EventHandler(this.FrmLavadero_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

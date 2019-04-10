@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMensualidad));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCliente = new System.Windows.Forms.TabPage();
-            this.tabPagos = new System.Windows.Forms.TabPage();
             this.gpAutomovil = new System.Windows.Forms.GroupBox();
             this.btnEliminarA = new System.Windows.Forms.Button();
             this.btnModificarA = new System.Windows.Forms.Button();
@@ -55,16 +53,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrarC = new System.Windows.Forms.Button();
             this.dgvBuscar = new System.Windows.Forms.DataGridView();
-            this.gpFactura = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtV = new System.Windows.Forms.TextBox();
-            this.txtF = new System.Windows.Forms.TextBox();
-            this.txtT = new System.Windows.Forms.TextBox();
-            this.txtP = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.tabPagos = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbTipoServicio = new System.Windows.Forms.ComboBox();
@@ -79,16 +69,13 @@
             this.btnBuscarPlaca = new System.Windows.Forms.Button();
             this.txtPlaca2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabCliente.SuspendLayout();
-            this.tabPagos.SuspendLayout();
             this.gpAutomovil.SuspendLayout();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
-            this.gpFactura.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPagos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +91,7 @@
             // 
             // tabCliente
             // 
-            this.tabCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabCliente.BackColor = System.Drawing.Color.Gray;
             this.tabCliente.Controls.Add(this.gpAutomovil);
             this.tabCliente.Controls.Add(this.gbCliente);
             this.tabCliente.Controls.Add(this.dgvBuscar);
@@ -114,33 +101,6 @@
             this.tabCliente.Size = new System.Drawing.Size(868, 495);
             this.tabCliente.TabIndex = 0;
             this.tabCliente.Text = "Registro";
-            // 
-            // tabPagos
-            // 
-            this.tabPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tabPagos.Controls.Add(this.label11);
-            this.tabPagos.Controls.Add(this.gpFactura);
-            this.tabPagos.Controls.Add(this.label9);
-            this.tabPagos.Controls.Add(this.label7);
-            this.tabPagos.Controls.Add(this.cmbTipoServicio);
-            this.tabPagos.Controls.Add(this.lblAutomovil);
-            this.tabPagos.Controls.Add(this.lblTiempo);
-            this.tabPagos.Controls.Add(this.btnPago);
-            this.tabPagos.Controls.Add(this.dgvPagos);
-            this.tabPagos.Controls.Add(this.txtTipo);
-            this.tabPagos.Controls.Add(this.txtObservaciones);
-            this.tabPagos.Controls.Add(this.txtPlaca3);
-            this.tabPagos.Controls.Add(this.label6);
-            this.tabPagos.Controls.Add(this.btnBuscarPlaca);
-            this.tabPagos.Controls.Add(this.txtPlaca2);
-            this.tabPagos.Controls.Add(this.label4);
-            this.tabPagos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPagos.Location = new System.Drawing.Point(4, 22);
-            this.tabPagos.Name = "tabPagos";
-            this.tabPagos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagos.Size = new System.Drawing.Size(868, 495);
-            this.tabPagos.TabIndex = 1;
-            this.tabPagos.Text = "Pagos";
             // 
             // gpAutomovil
             // 
@@ -371,103 +331,41 @@
             this.dgvBuscar.Size = new System.Drawing.Size(398, 235);
             this.dgvBuscar.TabIndex = 36;
             // 
-            // gpFactura
+            // tabPagos
             // 
-            this.gpFactura.Controls.Add(this.pictureBox2);
-            this.gpFactura.Controls.Add(this.txtV);
-            this.gpFactura.Controls.Add(this.txtF);
-            this.gpFactura.Controls.Add(this.txtT);
-            this.gpFactura.Controls.Add(this.txtP);
-            this.gpFactura.Controls.Add(this.label13);
-            this.gpFactura.Controls.Add(this.label12);
-            this.gpFactura.Controls.Add(this.label);
-            this.gpFactura.Controls.Add(this.label10);
-            this.gpFactura.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpFactura.Location = new System.Drawing.Point(501, 187);
-            this.gpFactura.Name = "gpFactura";
-            this.gpFactura.Size = new System.Drawing.Size(329, 244);
-            this.gpFactura.TabIndex = 34;
-            this.gpFactura.TabStop = false;
-            this.gpFactura.Text = "Factura";
-            this.gpFactura.Visible = false;
+            this.tabPagos.BackColor = System.Drawing.Color.Gray;
+            this.tabPagos.Controls.Add(this.label11);
+            this.tabPagos.Controls.Add(this.label9);
+            this.tabPagos.Controls.Add(this.label7);
+            this.tabPagos.Controls.Add(this.cmbTipoServicio);
+            this.tabPagos.Controls.Add(this.lblAutomovil);
+            this.tabPagos.Controls.Add(this.lblTiempo);
+            this.tabPagos.Controls.Add(this.btnPago);
+            this.tabPagos.Controls.Add(this.dgvPagos);
+            this.tabPagos.Controls.Add(this.txtTipo);
+            this.tabPagos.Controls.Add(this.txtObservaciones);
+            this.tabPagos.Controls.Add(this.txtPlaca3);
+            this.tabPagos.Controls.Add(this.label6);
+            this.tabPagos.Controls.Add(this.btnBuscarPlaca);
+            this.tabPagos.Controls.Add(this.txtPlaca2);
+            this.tabPagos.Controls.Add(this.label4);
+            this.tabPagos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPagos.Location = new System.Drawing.Point(4, 22);
+            this.tabPagos.Name = "tabPagos";
+            this.tabPagos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagos.Size = new System.Drawing.Size(868, 495);
+            this.tabPagos.TabIndex = 1;
+            this.tabPagos.Text = "Pagos";
             // 
-            // pictureBox2
+            // label11
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(81, 29);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(135, 47);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txtV
-            // 
-            this.txtV.Location = new System.Drawing.Point(178, 193);
-            this.txtV.Name = "txtV";
-            this.txtV.Size = new System.Drawing.Size(100, 30);
-            this.txtV.TabIndex = 7;
-            // 
-            // txtF
-            // 
-            this.txtF.Location = new System.Drawing.Point(178, 157);
-            this.txtF.Name = "txtF";
-            this.txtF.Size = new System.Drawing.Size(100, 30);
-            this.txtF.TabIndex = 6;
-            // 
-            // txtT
-            // 
-            this.txtT.Location = new System.Drawing.Point(178, 121);
-            this.txtT.Name = "txtT";
-            this.txtT.Size = new System.Drawing.Size(100, 30);
-            this.txtT.TabIndex = 5;
-            // 
-            // txtP
-            // 
-            this.txtP.Location = new System.Drawing.Point(178, 84);
-            this.txtP.Name = "txtP";
-            this.txtP.Size = new System.Drawing.Size(100, 30);
-            this.txtP.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(25, 200);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(144, 23);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Valor Mensualidad";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(25, 160);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(147, 23);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Fecha Mensualidad";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(25, 120);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(108, 23);
-            this.label.TabIndex = 1;
-            this.label.Text = "Tipo Vehiculo";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(28, 84);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 23);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Placa";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(33, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 23);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Tipo Servicio";
             // 
             // label9
             // 
@@ -537,9 +435,9 @@
             // dgvPagos
             // 
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPagos.Location = new System.Drawing.Point(33, 196);
+            this.dgvPagos.Location = new System.Drawing.Point(138, 205);
             this.dgvPagos.Name = "dgvPagos";
-            this.dgvPagos.Size = new System.Drawing.Size(427, 204);
+            this.dgvPagos.Size = new System.Drawing.Size(634, 204);
             this.dgvPagos.TabIndex = 27;
             // 
             // txtTipo
@@ -602,16 +500,6 @@
             this.label4.TabIndex = 20;
             this.label4.Text = "Buscar Placa";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(33, 159);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 23);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Tipo Servicio";
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -627,16 +515,13 @@
             this.Load += new System.EventHandler(this.frmMensualidad_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabCliente.ResumeLayout(false);
-            this.tabPagos.ResumeLayout(false);
-            this.tabPagos.PerformLayout();
             this.gpAutomovil.ResumeLayout(false);
             this.gpAutomovil.PerformLayout();
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
-            this.gpFactura.ResumeLayout(false);
-            this.gpFactura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPagos.ResumeLayout(false);
+            this.tabPagos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
             this.ResumeLayout(false);
 
@@ -670,16 +555,6 @@
         private System.Windows.Forms.DataGridView dgvBuscar;
         private System.Windows.Forms.TabPage tabPagos;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox gpFactura;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtV;
-        private System.Windows.Forms.TextBox txtF;
-        private System.Windows.Forms.TextBox txtT;
-        private System.Windows.Forms.TextBox txtP;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbTipoServicio;

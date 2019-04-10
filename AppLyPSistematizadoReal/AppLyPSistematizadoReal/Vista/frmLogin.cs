@@ -141,6 +141,7 @@ namespace AppLyPSistematizadoReal.Vista
                 {
                     MessageBox.Show("Bienvenido Administrador");
                     objAdministrador.Show();
+                    this.Hide();
                     incorrecto = true;
 
 
@@ -149,6 +150,7 @@ namespace AppLyPSistematizadoReal.Vista
                 {
                     MessageBox.Show("Bienvenido Jefe");
                     objJefe.Show();
+                    this.Hide();
                     incorrecto = true;
 
                 }
@@ -164,6 +166,11 @@ namespace AppLyPSistematizadoReal.Vista
 
                 MessageBox.Show("Datos Incorrectos");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
